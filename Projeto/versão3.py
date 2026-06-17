@@ -4,25 +4,31 @@ import difflib
 
 # Dicionário de perguntas e respostas
 perguntas_respostas = {
-    # Informações gerais
-    "jogos destaques": "Confira os jogos em destaque desta semana.",
-    "matricula": "As matrículas estão abertas até o dia 30 de junho. Procure a secretaria para mais informações.",
-    "cursos": "Oferecemos cursos de Informática, Administração e Técnico em Desenvolvimento de Sistemas.",
-    "contato": "Você pode nos contatar pelo telefone (11) 1234-5678 ou pelo e-mail contato@escola.com.br",
-    "endereco": "Nossa escola fica na Rua das Flores, 123, Centro, Cidade Exemplo.",
+     # Informações gerais
+    "jogos destaques": "Nossos destaques estão sendo os jogos de ação e aventura, como 'The Legend of Zelda' e 'God of War'.",
+    "formas de pagamento": "Aceitamos cartões de crédito, pix, débito, PayPal e boleto bancário.",
+    "promocoes": "Estamos com uma promoção especial de 20% de desconto em todos os jogos do gênero casual durante esta semana!",
+    "lançamentos": "Temos um lançamento incrível chegando em breve para os jogadores mobile: 'Red Dead Redemption 2'! Fique atento para mais detalhes.",
+    "gêneros dos jogos": "Nossos jogos estão disponíveis em diversos gêneros, incluindo ação, aventura, casual, RPG e esportes.",
+    
+    #Jogos específicos
+    "jogos multiplayer": "Temos ótimos jogos multiplayer, como 'Among Us', 'Fortnite' e 'Call of Duty: Warzone', que proporcionam diversão e competição online com amigos e jogadores de todo o mundo.",
+    "jogos singleplayer": "Temos uma excelente seleção de jogos singleplayer, incluindo títulos de ação, aventura e RPG que oferecem histórias envolventes e jogabilidade imersiva.",
+    "jogos mobiles": "Oferecemos uma ampla variedade de jogos mobiles para todos os gostos, desde clássicos até lançamentos exclusivos para dispositivos móveis.",
 
-    # Curso Técnico em Desenvolvimento de Sistemas
-    "desenvolvimento": "O curso Técnico em Desenvolvimento de Sistemas tem duração de 2 anos, abordando programação, bancos de dados e automação.",
-    "curso desenvolvimento": "O curso oferece conhecimentos em Python, Java, SQL, redes e práticas de desenvolvimento de software.",
-    "disciplinas desenvolvimento": "Algumas disciplinas: Lógica de Programação, Estrutura de Dados, Banco de Dados, Desenvolvimento Web e Automação.",
-    "habilidades desenvolvimento": "Os alunos aprendem a criar sistemas, desenvolver aplicações e automatizar processos de forma prática.",
+    #plataformas
+    "steam": "Jogos disponíveis na Steam incluem uma vasta gama de gêneros, desde indie até AAA, com títulos populares como 'Counter-Strike: Global Offensive', 'Hollow Knight' e 'The Witcher 3'.",
+    "playStation": "A PlayStation oferece uma ampla seleção de jogos exclusivos e aclamados, incluindo títulos da série 'The Last of Us' e 'God of War'.",
+    "xbox": "A Xbox possui uma biblioteca diversificada de jogos, com destaque para títulos exclusivos como 'Halo' e 'Forza'.",
+    "nintendo": "A Nintendo é conhecida por seus títulos icônicos, como 'The Legend of Zelda' e 'Mario', que oferecem experiências únicas e envolventes.",
 
-    # Curso de Administração
-    "administracao": "O curso de Administração tem duração de 2 anos, abordando gestão, finanças, marketing e empreendedorismo.",
-    "curso administracao": "O curso prepara o aluno para funções administrativas, planejamento estratégico e gestão de equipes.",
-    "disciplinas administracao": "Algumas disciplinas: Contabilidade, Gestão de Pessoas, Marketing, Planejamento Estratégico e Empreendedorismo.",
-    "habilidades administracao": "Os alunos aprendem a gerir empresas, tomar decisões estratégicas e organizar processos administrativos."
+    #suporte
+    "gift cards": "Oferecemos gift cards para diversas plataformas, incluindo Steam, PlayStation, Xbox e Nintendo. Você pode adquirir nossos gift cards em nosso site ou em lojas parceiras.",
+    "reembolso": "Para solicitar um reembolso, por favor, entre em contato com nosso suporte ao cliente através do e-mail suporte@lootzone.com.",
+    "suporte": "Nosso suporte ao cliente está disponível 24/7 para ajudar com qualquer dúvida ou problema que você possa ter. Entre em contato conosco pelo e-mail suporte@lootzone.com."
 }
+
+# Lista de opções numeradas
 
 opcoes = [
     "1. Jogos Destaques",
@@ -40,8 +46,7 @@ opcoes = [
     "13. Gift Cards",
     "14. Reembolso",
     "15. Suporte",
-    "16. Pergunta livre",
-    "17. Sair"
+    "16. Sair"
 ]
 
 # Mapear número para chave ou ação especial
@@ -58,8 +63,10 @@ mapa_opcoes = {
     10: "playstation",
     11: "xbox",
     12: "nintendo",
-    13: "livre",
-    14: "sair"
+    13: "gift cards",
+    14: "reembolso",
+    15: "suporte",
+    16: "sair"
 }
 
 # Função para obter resposta aproximada
