@@ -12,15 +12,15 @@ perguntas_respostas = {
     "gêneros dos jogos": "Nossos jogos estão disponíveis em diversos gêneros, incluindo ação, aventura, casual, RPG e esportes.",
     
     #Jogos específicos
-    "jogos multiplayer": "",
-    "jogos singleplayer": "",
-    "jogos mobiles": "",
+    "jogos multiplayer": "Temos ótimos jogos multiplayer, como 'Among Us', 'Fortnite' e 'Call of Duty: Warzone', que proporcionam diversão e competição online com amigos e jogadores de todo o mundo.",
+    "jogos singleplayer": "Temos uma excelente seleção de jogos singleplayer, incluindo títulos de ação, aventura e RPG que oferecem histórias envolventes e jogabilidade imersiva.",
+    "jogos mobiles": "Oferecemos uma ampla variedade de jogos mobiles para todos os gostos, desde clássicos até lançamentos exclusivos para dispositivos móveis.",
 
     #plataformas
-    "steam": "",
-    "playStation": "",
-    "xbox": "",
-    "nintendo": "",
+    "steam": "Jogos disponíveis na Steam incluem uma vasta gama de gêneros, desde indie até AAA, com títulos populares como 'Counter-Strike: Global Offensive', 'Hollow Knight' e 'The Witcher 3'.",
+    "playStation": "A PlayStation oferece uma ampla seleção de jogos exclusivos e aclamados, incluindo títulos da série 'The Last of Us' e 'God of War'.",
+    "xbox": "A Xbox possui uma biblioteca diversificada de jogos, com destaque para títulos exclusivos como 'Halo' e 'Forza'.",
+    "nintendo": "A Nintendo é conhecida por seus títulos icônicos, como 'The Legend of Zelda' e 'Mario', que oferecem experiências únicas e envolventes."
 }
 
 # Lista de opções numeradas
