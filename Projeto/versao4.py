@@ -7,24 +7,28 @@ import difflib
 
 # Dicionário de perguntas e respostas detalhadas
 perguntas_respostas = {
-    # Informações gerais
-    "horario": "O horário da escola é das 07:00 às 17:00, de segunda a sexta-feira. As aulas começam pontualmente às 7h e terminam às 17h, incluindo intervalos regulares para alimentação e descanso.",
-    "matricula": "As matrículas estão abertas até o dia 30 de junho. É necessário apresentar documentos pessoais e comprovante de residência na secretaria. Mais informações pelo telefone ou e-mail.",
-    "cursos": "A escola oferece cursos de Informática, Administração e Técnico em Desenvolvimento de Sistemas, cada um com conteúdos práticos e teóricos para capacitar o aluno.",
-    "contato": "Você pode entrar em contato pelo telefone (11) 1234-5678 ou pelo e-mail contato@escola.com.br. A secretaria atende de segunda a sexta-feira, das 7h às 17h.",
-    "endereco": "A escola está localizada na Rua das Flores, 123, Centro, Cidade Exemplo. Fácil acesso por transporte público e estacionamento disponível no local.",
+     # Informações gerais
+    "jogos destaques": "Nossos destaques estão sendo os jogos de ação e aventura, como 'The Legend of Zelda' e 'God of War'.",
+    "formas de pagamento": "Aceitamos cartões de crédito, pix, débito, PayPal e boleto bancário.",
+    "promocoes": "Estamos com uma promoção especial de 20% de desconto em todos os jogos do gênero casual durante esta semana!",
+    "lançamentos": "Temos um lançamento incrível chegando em breve para os jogadores mobile: 'Red Dead Redemption 2'! Fique atento para mais detalhes.",
+    "gêneros dos jogos": "Nossos jogos estão disponíveis em diversos gêneros, incluindo ação, aventura, casual, RPG e esportes.",
+    
+    #Jogos específicos
+    "jogos multiplayer": "Temos ótimos jogos multiplayer, como 'Among Us', 'Fortnite' e 'Call of Duty: Warzone', que proporcionam diversão e competição online com amigos e jogadores de todo o mundo.",
+    "jogos singleplayer": "Temos uma excelente seleção de jogos singleplayer, incluindo títulos de ação, aventura e RPG que oferecem histórias envolventes e jogabilidade imersiva.",
+    "jogos mobiles": "Oferecemos uma ampla variedade de jogos mobiles para todos os gostos, desde clássicos até lançamentos exclusivos para dispositivos móveis.",
 
-    # Curso Técnico em Desenvolvimento de Sistemas
-    "desenvolvimento": "O curso Técnico em Desenvolvimento de Sistemas tem duração de 2 anos, abordando lógica de programação, linguagens como Python e Java, banco de dados, redes e automação. Preparação completa para atuar como desenvolvedor de software.",
-    "curso desenvolvimento": "O aluno aprende a criar sistemas, desenvolver aplicações web e desktop, automatizar processos e gerenciar projetos de TI.",
-    "disciplinas desenvolvimento": "Disciplinas incluem Lógica de Programação, Estrutura de Dados, Banco de Dados, Desenvolvimento Web, Automação e Projeto Integrador.",
-    "habilidades desenvolvimento": "Ao final do curso, o aluno será capaz de programar, criar aplicações completas, trabalhar em equipe em projetos de TI e aplicar soluções automatizadas.",
+    #plataformas
+    "steam": "Jogos disponíveis na Steam incluem uma vasta gama de gêneros, desde indie até AAA, com títulos populares como 'Counter-Strike: Global Offensive', 'Hollow Knight' e 'The Witcher 3'.",
+    "playStation": "A PlayStation oferece uma ampla seleção de jogos exclusivos e aclamados, incluindo títulos da série 'The Last of Us' e 'God of War'.",
+    "xbox": "A Xbox possui uma biblioteca diversificada de jogos, com destaque para títulos exclusivos como 'Halo' e 'Forza'.",
+    "nintendo": "A Nintendo é conhecida por seus títulos icônicos, como 'The Legend of Zelda' e 'Mario', que oferecem experiências únicas e envolventes.",
 
-    # Curso de Administração
-    "administracao": "O curso de Administração tem duração de 2 anos, com foco em gestão, planejamento estratégico, finanças, marketing e empreendedorismo, preparando o aluno para atuar em diversas áreas empresariais.",
-    "curso administracao": "O aluno aprende a organizar empresas, planejar estratégias, gerenciar equipes e tomar decisões administrativas eficientes.",
-    "disciplinas administracao": "Disciplinas incluem Contabilidade, Gestão de Pessoas, Marketing, Planejamento Estratégico, Empreendedorismo e Projeto Integrador.",
-    "habilidades administracao": "Ao final do curso, o aluno será capaz de gerir processos administrativos, planejar e executar estratégias de negócio, administrar finanças e liderar equipes."
+    #suporte
+    "gift cards": "Oferecemos gift cards para diversas plataformas, incluindo Steam, PlayStation, Xbox e Nintendo. Você pode adquirir nossos gift cards em nosso site ou em lojas parceiras.",
+    "reembolso": "Para solicitar um reembolso, por favor, entre em contato com nosso suporte ao cliente através do e-mail suporte@lootzone.com.",
+    "suporte": "Nosso suporte ao cliente está disponível 24/7 para ajudar com qualquer dúvida ou problema que você possa ter. Entre em contato conosco pelo e-mail suporte@lootzone.com."
 }
 
 # Função de correspondência aproximada
@@ -69,11 +73,13 @@ def atualizar_botoes_categoria(event):
     botoes_categoria = []
 
     if categoria == "Geral":
-        botoes_categoria = ["horario", "matricula", "cursos", "contato", "endereco"]
-    elif categoria == "Desenvolvimento de Sistemas":
-        botoes_categoria = ["desenvolvimento", "curso desenvolvimento", "disciplinas desenvolvimento", "habilidades desenvolvimento"]
-    elif categoria == "Administração":
-        botoes_categoria = ["administracao", "curso administracao", "disciplinas administracao", "habilidades administracao"]
+        botoes_categoria = ["jogos destaques", "formas de pagamento", "promoções", "lançamentos", "gêneros de jogos"]
+    elif categoria == "Jogos Específicos":
+        botoes_categoria = ["jogos multiplayer", "jogos singleplayer", "jogos mobiles"]
+    elif categoria == "Plataformas":
+        botoes_categoria = ["steam", "playstation", "xbox", "nintendo"]
+    elif categoria == "Suporte":
+        botoes_categoria = ["gift cards", "reembolso", "suporte"]
 
     for chave in botoes_categoria:
         btn = tk.Button(frame_botoes, text=chave.replace("_", " ").title(), width=30, command=lambda c=chave: botao_opcao(c))
@@ -81,7 +87,7 @@ def atualizar_botoes_categoria(event):
 
 # Configuração da interface
 root = tk.Tk()
-root.title("Chatbot da Escola - Versão Final 4")
+root.title("Chatbot da LootZone - Versão Final 4")
 root.geometry("700x550")
 
 # Área de chat
@@ -104,7 +110,7 @@ frame_categoria.pack(pady=5)
 
 tk.Label(frame_categoria, text="Escolha uma categoria:").pack(side=tk.LEFT, padx=5)
 
-combo_categoria = ttk.Combobox(frame_categoria, values=["Geral", "Desenvolvimento de Sistemas", "Administração"])
+combo_categoria = ttk.Combobox(frame_categoria, values=["Geral", "Jogos Específicos", "Plataformas", "Suporte"])
 combo_categoria.current(0)
 combo_categoria.bind("<<ComboboxSelected>>", atualizar_botoes_categoria)
 combo_categoria.pack(side=tk.LEFT, padx=5)
