@@ -5,58 +5,58 @@ import difflib
 # Dicionário de perguntas e respostas
 perguntas_respostas = {
     # Informações gerais
-    "horario": "O horário da escola é das 07:00 às 17:00, de segunda a sexta.",
-    "matricula": "As matrículas estão abertas até o dia 30 de junho. Procure a secretaria para mais informações.",
-    "cursos": "Oferecemos cursos de Informática, Administração e Técnico em Desenvolvimento de Sistemas.",
-    "contato": "Você pode nos contatar pelo telefone (11) 1234-5678 ou pelo e-mail contato@escola.com.br",
-    "endereco": "Nossa escola fica na Rua das Flores, 123, Centro, Cidade Exemplo.",
+    "jogos destaques": "Nossos destaques estão sendo os jogos de ação e aventura, como 'The Legend of Zelda' e 'God of War'.",
+    "formas de pagamento": "Aceitamos cartões de crédito, pix, débito, PayPal e boleto bancário.",
+    "promocoes": "Estamos com uma promoção especial de 20% de desconto em todos os jogos do gênero casual durante esta semana!",
+    "lançamentos": "Temos um lançamento incrível chegando em breve para os jogadores mobile: 'Red Dead Redemption 2'! Fique atento para mais detalhes.",
+    "gêneros dos jogos": "Nossos jogos estão disponíveis em diversos gêneros, incluindo ação, aventura, casual, RPG e esportes.",
+    
+    #Jogos específicos
+    "jogos multiplayer": "",
+    "jogos singleplayer": "",
+    "jogos mobiles": "",
 
-    # Curso Técnico em Desenvolvimento de Sistemas
-    "desenvolvimento": "O curso Técnico em Desenvolvimento de Sistemas tem duração de 2 anos, abordando programação, bancos de dados e automação.",
-    "curso desenvolvimento": "O curso oferece conhecimentos em Python, Java, SQL, redes e práticas de desenvolvimento de software.",
-    "disciplinas desenvolvimento": "Algumas disciplinas: Lógica de Programação, Estrutura de Dados, Banco de Dados, Desenvolvimento Web e Automação.",
-    "habilidades desenvolvimento": "Os alunos aprendem a criar sistemas, desenvolver aplicações e automatizar processos de forma prática.",
-
-    # Curso de Administração
-    "administracao": "O curso de Administração tem duração de 2 anos, abordando gestão, finanças, marketing e empreendedorismo.",
-    "curso administracao": "O curso prepara o aluno para funções administrativas, planejamento estratégico e gestão de equipes.",
-    "disciplinas administracao": "Algumas disciplinas: Contabilidade, Gestão de Pessoas, Marketing, Planejamento Estratégico e Empreendedorismo.",
-    "habilidades administracao": "Os alunos aprendem a gerir empresas, tomar decisões estratégicas e organizar processos administrativos."
+    #plataformas
+    "steam": "",
+    "playStation": "",
+    "xbox": "",
+    "nintendo": "",
 }
 
 # Lista de opções numeradas
 opcoes = [
-    "Horário da escola",
-    "Matrícula",
-    "Cursos oferecidos",
-    "Contato",
-    "Endereço",
-    "Curso Desenvolvimento de Sistemas",
-    "Disciplinas Desenvolvimento de Sistemas",
-    "Habilidades Desenvolvimento de Sistemas",
-    "Curso Administração",
-    "Disciplinas Administração",
-    "Habilidades Administração",
-    "Escrever pergunta livre",
+    "jogos destaques",
+    "formas de pagamento",
+    "promocoes",
+    "lancamentos",
+    "gêneros dos jogos",
+    "jogos multiplayer",
+    "jogos singleplayer",
+    "jogos mobiles",
+    "steam",
+    "playStation",
+    "xbox",
+    "nintendo",
     "Sair"
 ]
 
 # Mapear número para chave do dicionário ou ação especial
 mapa_opcoes = {
-    1: "horario",
-    2: "matricula",
-    3: "cursos",
-    4: "contato",
-    5: "endereco",
-    6: "desenvolvimento",
-    7: "disciplinas desenvolvimento",
-    8: "habilidades desenvolvimento",
-    9: "administracao",
-    10: "disciplinas administracao",
-    11: "habilidades administracao",
-    12: "livre",
+    1: "jogos destaques",
+    2: "formas de pagamento",
+    3: "promoções",
+    4: "lançamentos",
+    5: "gêneros de jogos",
+    6: "jogos multiplayer",
+    7: "jogos singleplayer",
+    8: "jogos mobiles",
+    9: "steam",
+    10: "playstation",
+    11: "xbox",
+    12: "nintendo",
     13: "sair"
 }
+
 
 def obter_resposta(pergunta, perguntas_respostas, limite_similaridade=0.6):
     """Busca correspondência aproximada para perguntas livres."""
@@ -69,7 +69,7 @@ def obter_resposta(pergunta, perguntas_respostas, limite_similaridade=0.6):
         return "Desculpe, não entendi sua pergunta. Tente escolher uma das opções numeradas."
 
 def iniciar_chat():
-    print("=== Bem-vindo ao Chatbot da Escola ===\n")
+    print("=== Bem-vindo ao Chatbot da LootZone ===\n")
 
     while True:
         print("Escolha uma opção digitando o número correspondente:")
